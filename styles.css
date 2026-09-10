@@ -2,6 +2,7 @@
     --bg-colour: #FFFDF9;
     --text-colour: #4A5759;
     --accent-colour: #EDAFB8;
+    --text-colour-translucent: #4a575924;
 }
 
 .momo-trust {
@@ -10,13 +11,18 @@
     font-style: normal;
 }
 
-
+/* Some Defaults */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
     color: var(--text-colour);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+}
+
+body {
     background-color: var(--bg-colour);
 }
 
@@ -29,6 +35,11 @@ a:hover {
     color: var(--accent-colour);
 }
 
+ul {
+    list-style: none;
+}
+
+/* Main Navigation */
 header {
     position: fixed;
     width: 100vw;
@@ -37,24 +48,55 @@ header {
     background-color: var(--bg-colour);
 }
 
-main {
-    padding-top: 5rem;
-}
-
 .navbar ul {
     display: flex;
     gap: 40px;
     padding: 1.75rem 4rem 1.25rem 4rem;
-    list-style: none;
 }
 
 .nav-link {
     font-size: 2rem;
 }
 
-.hero {}
+/* Home Page */
+main {
+    padding-top: 5rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: calc(100vh - 90px);
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, var(--text-colour-translucent) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--text-colour-translucent) 1px, transparent 1px);
+}
 
 .hero h1 {
     font-size: 6rem;
     text-align: center;
+}
+
+.section-heading {
+    font-family: "Geologica", sans-serif;
+    font-weight: 500;
+    font-size: 3.75rem;
+}
+
+em {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--accent-colour);
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-heading {
+    font-family: "Geologica", sans-serif;
+    font-weight: 300;
 }
