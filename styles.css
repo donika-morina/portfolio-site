@@ -39,6 +39,10 @@ ul {
     list-style: none;
 }
 
+.align-center {
+    text-align: center;
+}
+
 /* Main Navigation */
 header {
     position: fixed;
@@ -90,7 +94,31 @@ em {
     color: var(--accent-colour);
 }
 
+/* About Section */
+
+/* Projects Section */
+.project-container {
+    min-height: 10rem;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, var(--text-colour-translucent) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--text-colour-translucent) 1px, transparent 1px);
+}
+
+.projects>.section-heading:first-child {
+    margin-bottom: -1.5rem;
+    text-align: right;
+}
+
+.projects>.section-heading:last-child {
+    margin-top: -3rem;
+}
+
 /* Footer */
+footer {
+    padding: 1rem 3rem;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -99,4 +127,10 @@ em {
 .footer-heading {
     font-family: "Geologica", sans-serif;
     font-weight: 300;
+}
+
+.footer-bottom {
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
 }
