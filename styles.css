@@ -1,0 +1,60 @@
+:root {
+    --bg-colour: #FFFDF9;
+    --text-colour: #4A5759;
+    --accent-colour: #EDAFB8;
+}
+
+.momo-trust {
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--text-colour);
+    background-color: var(--bg-colour);
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-colour);
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    background-color: var(--bg-colour);
+}
+
+main {
+    padding-top: 5rem;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    padding: 1.75rem 4rem 1.25rem 4rem;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 2rem;
+}
+
+.hero {}
+
+.hero h1 {
+    font-size: 6rem;
+    text-align: center;
+}
