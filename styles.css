@@ -2,7 +2,7 @@
     --bg-colour: #FFFDF9;
     --text-colour: #4A5759;
     --accent-colour: #EDAFB8;
-    --text-colour-translucent: #4a575924;
+    --text-colour-translucent: #4a575917;
 }
 
 .momo-trust {
@@ -45,8 +45,8 @@ ul {
 
 /* Main Navigation */
 header {
-    position: fixed;
-    width: 100vw;
+    position: sticky;
+    width: 100%;
     display: flex;
     justify-content: end;
     background-color: var(--bg-colour);
@@ -67,13 +67,25 @@ main {
     padding-top: 5rem;
 }
 
+.site-container {
+    max-width: 2000px;
+    margin: auto;
+    background-color: var(--bg-colour);
+    border-left: 2px var(--text-colour-translucent) solid;
+    border-right: 2px var(--text-colour-translucent) solid;
+}
+
 /* Hero Section */
 .hero {
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px - 4rem);
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, var(--text-colour-translucent) 1px, transparent 1px),
         linear-gradient(to bottom, var(--text-colour-translucent) 1px, transparent 1px);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
@@ -92,6 +104,12 @@ em {
     font-weight: 700;
     font-size: 4rem;
     color: var(--accent-colour);
+}
+
+/* Horizontal Scroll*/
+.horizontal-scroll {
+    border: 2px solid var(--text-colour);
+    height: 4rem;
 }
 
 /* About Section */
