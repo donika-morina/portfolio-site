@@ -43,6 +43,10 @@ ul {
     text-align: center;
 }
 
+.align-right {
+    text-align: right;
+}
+
 /* Main Navigation */
 header {
     position: sticky;
@@ -105,12 +109,33 @@ em {
 }
 
 /* Horizontal Scroll*/
-.horizontal-scroll {
-    border: 2px solid var(--text-colour);
-    height: 4rem;
+.fancy-border {
+    width: 100%;
+}
+
+.scroller {
+    padding: 0.25rem 0;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
 }
 
 /* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 4rem;
+    margin-top: 8rem;
+}
+
+.profile {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: var(--text-colour);
+}
 
 /* Projects Section */
 .project-container {
