@@ -94,13 +94,13 @@ header {
 .section-heading {
     font-family: "Geologica", sans-serif;
     font-weight: 500;
-    font-size: 3.75rem;
+    font-size: 3rem;
 }
 
 em {
     font-family: "Fraunces", serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.15rem;
     color: var(--accent-colour);
 }
 
