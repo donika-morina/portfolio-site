@@ -47,6 +47,12 @@ ul {
     text-align: right;
 }
 
+.about,
+.tools,
+.projects {
+    margin-bottom: 10rem;
+}
+
 /* Main Navigation */
 header {
     position: sticky;
@@ -79,7 +85,7 @@ header {
 
 /* Hero Section */
 .hero {
-    min-height: calc(100vh - 9rem - 1px);
+    height: clamp(500px, calc(100vh - 9rem - 1px), 1080px);
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, var(--text-colour-translucent) 1px, transparent 1px),
@@ -135,6 +141,45 @@ em {
     width: 500px;
     border-radius: 50%;
     background-color: var(--text-colour);
+}
+
+/* Tool Section */
+.tool-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.tool {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 300px;
+    min-height: 5.25rem;
+    border: 2px solid var(--text-colour);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.tool-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tool-info>h6 {
+    font-size: 2.25rem;
+    line-height: 2.2rem;
 }
 
 /* Projects Section */
