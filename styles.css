@@ -124,7 +124,7 @@ em {
 .horizontal-scroll {
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
-    border-image: var(--border-svg) 12 round;
+    border-image: var(--border-svg) 13 round;
 }
 
 .scroller {
@@ -220,7 +220,7 @@ em {
 footer {
     padding: 2rem 3rem;
     border-top: 12px solid transparent;
-    border-image: var(--border-svg) 12 round;
+    border-image: var(--border-svg) 13 round;
 }
 
 .footer-container {
