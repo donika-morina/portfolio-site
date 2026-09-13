@@ -156,6 +156,10 @@ em {
 }
 
 /* Tool Section */
+.tools>.section-heading {
+    margin-bottom: 1.75rem;
+}
+
 .tool-container {
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +194,7 @@ em {
 }
 
 .tool-info>h6 {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
     line-height: 2.2rem;
 }
 
