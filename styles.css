@@ -131,17 +131,25 @@ em {
     padding: 1rem 0;
     font-size: 2rem;
     font-weight: 200;
+    animation: marquee 15s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
 }
 
 .scroller>span {
     display: inline-block;
-    transition: transform 0.5s ease-out;
+    transition: transform 0.3s ease-out;
     padding: 0.2rem;
     font-size: 2rem;
     cursor: default;
 }
 
-.scroller>span.up {
+.scroller>span:hover {
     transform: translateY(-20px);
 }
 
