@@ -128,10 +128,21 @@ em {
 }
 
 .scroller {
-    padding: 0.25rem 0;
+    padding: 1rem 0;
     font-size: 2rem;
     font-weight: 200;
-    text-align: center;
+}
+
+.scroller>span {
+    display: inline-block;
+    transition: transform 0.5s ease-out;
+    padding: 0.2rem;
+    font-size: 2rem;
+    cursor: default;
+}
+
+.scroller>span.up {
+    transform: translateY(-20px);
 }
 
 /* About Section */
