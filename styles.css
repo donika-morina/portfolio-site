@@ -44,14 +44,15 @@ ul {
     text-align: center;
 }
 
-.align-right {
-    text-align: right;
-}
 
 .about,
 .tools,
 .projects {
     margin-bottom: 10rem;
+}
+
+.inline-icon {
+    transform: translateY(15%);
 }
 
 /* Main Navigation */
@@ -62,6 +63,7 @@ header {
     display: flex;
     justify-content: end;
     background-color: var(--bg-colour);
+    z-index: 100;
 }
 
 .navbar ul {
@@ -120,6 +122,20 @@ em {
     color: var(--accent-colour);
 }
 
+.see-more {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.see-more>svg {
+    transform: translateY(25%);
+    transition: transform 0.2s ease;
+}
+
+.see-more:hover>svg {
+    transform: translate(50%, 25%);
+}
+
 /* Horizontal Scroll*/
 .horizontal-scroll {
     width: 100%;
@@ -130,10 +146,9 @@ em {
 }
 
 .scroller {
-    padding: 1rem 0;
     font-size: 2rem;
     font-weight: 200;
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
     white-space: nowrap;
 }
 
@@ -146,13 +161,15 @@ em {
 .scroller>span {
     display: inline-block;
     transition: transform 0.3s ease-out;
-    padding: 0.2rem;
+    padding: 1rem 0.3rem;
     font-size: 2rem;
     cursor: default;
+    font-family: monospace;
+    opacity: 70%;
 }
 
 .scroller>span:hover {
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(1.25);
 }
 
 /* About Section */
@@ -163,6 +180,18 @@ em {
     flex-wrap: wrap;
     gap: 8rem;
     margin-top: 8rem;
+}
+
+.about-content {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-content>:nth-child(2) {
+    align-self: flex-end;
+    padding-right: 4rem;
 }
 
 .about-heading {
