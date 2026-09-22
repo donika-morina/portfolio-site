@@ -293,8 +293,8 @@ em {
 .tool {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    width: 300px;
-    min-height: 5.25rem;
+    width: 275px;
+    min-height: 4.75rem;
     border: 2px solid var(--text-colour);
     border-radius: 5px;
     padding: 0.5rem;
@@ -314,8 +314,12 @@ em {
 }
 
 .tool-info>h6 {
-    font-size: 2.15rem;
-    line-height: 2.2rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+}
+
+.tool-info>p {
+    font-size: 0.9rem;
 }
 
 /* Projects Section */
