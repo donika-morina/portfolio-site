@@ -2,6 +2,7 @@
     --bg-colour: #FFFDF9;
     --text-colour: #4A5759;
     --accent-colour: #EDAFB8;
+    --accent-translucent: #eda5b863;
     --text-colour-translucent: #4a575917;
     --border-svg: url("/assets/border.svg");
 }
@@ -40,6 +41,11 @@ ul {
     list-style: none;
 }
 
+::selection {
+    background-color: var(--accent-translucent);
+    /*color: var(--text-colour);*/
+}
+
 .align-center {
     text-align: center;
 }
@@ -73,7 +79,7 @@ header {
 }
 
 .nav-link {
-    font-size: 2rem;
+    font-size: 1.65rem;
 }
 
 /* Home Page */
@@ -97,17 +103,81 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.hero h1 {
+.hero-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
+.hero-subheading,
+.mobile-hero-subheading {
+    font-size: 2.5rem;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+}
+
+.hero-subheading.left {
+    align-self: flex-start;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    margin-bottom: -3rem;
+}
+
+.hero-subheading.right {
+    align-self: flex-end;
+    grid-row: 3;
+    grid-column: 3;
+    align-self: start;
+    margin-top: -3rem;
+}
+
+.hero-heading {
+    width: 100%;
+    display: flex;
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+.hero-heading h1 {
     font-size: 6rem;
     text-align: center;
+    border-left: 3px solid var(--text-colour);
+    border-right: 3px solid var(--text-colour);
+    padding: 0 1rem;
+}
+
+.placeholder {
+    visibility: hidden;
+    font-size: 6rem;
+    text-align: center;
+    padding: 0 1rem;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.hero-heading::before,
+.hero-heading::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px solid var(--text-colour);
+    margin: auto;
+}
+
+.mobile-hero-subheading.hidden {
+    display: none;
 }
 
 .section-heading {
     font-family: "Geologica", sans-serif;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0 5%;
 }
 
@@ -118,7 +188,7 @@ section {
 em {
     font-family: "Fraunces", serif;
     font-weight: 700;
-    font-size: 3.15rem;
+    font-size: 2.65rem;
     color: var(--accent-colour);
 }
 
@@ -169,7 +239,7 @@ em {
 }
 
 .scroller>span:hover {
-    transform: translateY(-20px) scale(1.25);
+    transform: translateY(-20px);
 }
 
 /* About Section */
@@ -215,8 +285,8 @@ em {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    max-width: 1500px;
+    gap: 1.5rem;
+    max-width: 1400px;
     margin: auto;
 }
 
