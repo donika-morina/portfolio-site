@@ -5,6 +5,8 @@
     --accent-translucent: #eda5b863;
     --text-colour-translucent: #4a575917;
     --border-svg: url("/assets/border.svg");
+
+    --project-card-width: 450px;
 }
 
 .momo-trust {
@@ -48,6 +50,17 @@ ul {
 
 .align-center {
     text-align: center;
+    padding: 5rem;
+}
+
+.align-left {
+    text-align: left;
+    padding-left: 5rem;
+}
+
+.align-right {
+    text-align: right;
+    padding-right: 5rem;
 }
 
 
@@ -178,7 +191,6 @@ header {
     font-family: "Geologica", sans-serif;
     font-weight: 500;
     font-size: 2.5rem;
-    padding: 0 5%;
 }
 
 section {
@@ -234,7 +246,7 @@ em {
     padding: 1rem 0.3rem;
     font-size: 2rem;
     cursor: default;
-    font-family: monospace;
+    font-family: "Noto Sans", monospace;
     opacity: 70%;
 }
 
@@ -286,7 +298,7 @@ em {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    max-width: 1400px;
+    width: 80%;
     margin: auto;
 }
 
@@ -342,12 +354,11 @@ em {
 
 .project-card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 5rem 0 8rem 0;
-    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    padding: 5rem 0 10rem 0;
     margin: auto;
-    row-gap: 5rem;
+    width: min(calc(3.5 * var(--project-card-width)), 100%);
 }
 
 .project-card {
@@ -408,23 +419,46 @@ em {
 }
 
 .project-card:nth-child(1) {
-    top: 0;
-    right: 0;
+    grid-row: 1;
+    grid-column: 2;
+    align-self: end;
+    justify-self: start;
 }
 
 .project-card:nth-child(2) {
-    top: 0;
-    left: 0;
+    grid-row: 2;
+    grid-column: 1;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: -7rem;
 }
 
 .project-card:nth-child(3) {
-    bottom: 0;
-    left: 0;
+    grid-row: 2;
+    grid-column: 3;
+    align-self: start;
+    justify-self: center;
+    margin-top: -7rem;
 }
 
 .project-card:nth-child(4) {
-    bottom: 0;
-    right: 0;
+    grid-row: 3;
+    grid-column: 2;
+    align-self: start;
+    justify-self: end;
+}
+
+.project-link {
+    grid-row: 3;
+    grid-column: 3;
+    position: relative;
+}
+
+.project-link>.see-more {
+    position: absolute;
+    text-wrap-mode: nowrap;
+    bottom: 50%;
+    left: 35%;
 }
 
 
@@ -461,4 +495,38 @@ footer {
     width: 25px;
     height: 25px;
     background-image: url("/assets/Tag.svg");
+}
+
+@media (max-width: 1305px) {
+    .project-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .project-card:nth-child(1),
+    .project-card:nth-child(2),
+    .project-card:nth-child(3),
+    .project-card:nth-child(4) {
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .project-link {
+        position: unset;
+        width: 435px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .project-link>.see-more {
+        position: static;
+        padding: 0;
+    }
 }
