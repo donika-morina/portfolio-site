@@ -93,6 +93,19 @@ header {
 
 .nav-link {
     font-size: 1.65rem;
+    position: relative;
+}
+
+.nav-link.current::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--accent-colour);
+    bottom: -4px;
+    left: 5%;
+    z-index: -1;
 }
 
 /* Home Page */
@@ -430,7 +443,7 @@ em {
     grid-column: 1;
     align-self: end;
     justify-self: center;
-    margin-bottom: -7rem;
+    margin-bottom: -10rem;
 }
 
 .project-card:nth-child(3) {
@@ -438,7 +451,7 @@ em {
     grid-column: 3;
     align-self: start;
     justify-self: center;
-    margin-top: -7rem;
+    margin-top: -10rem;
 }
 
 .project-card:nth-child(4) {
