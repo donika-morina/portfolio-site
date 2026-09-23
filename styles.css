@@ -183,7 +183,7 @@ header {
     margin: auto;
 }
 
-.mobile-hero-subheading.hidden {
+.mobile-hero-subheading {
     display: none;
 }
 
@@ -528,5 +528,29 @@ footer {
     .project-link>.see-more {
         position: static;
         padding: 0;
+    }
+
+    .hero-subheading {
+        display: none;
+    }
+
+    .mobile-hero-subheading {
+        display: block;
+        padding: 3rem 0 5rem 0;
+        font-size: 2rem;
+    }
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .placeholder {
+        display: none;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }
