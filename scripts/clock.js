@@ -1,14 +1,18 @@
 
 window.onload = () => {
     const clock = document.getElementById("eastern-time");
-    const timer = document.getElementById("time-on-site");
-    let minutes = 0;
-    let hours = 0;
-    let seconds = 0;
+
+    // Get current eastern time
     setInterval(() => {
         let date = new Date().toLocaleTimeString("en-GB", { timeZone: "America/New_York" });
         clock.textContent = date;
     }, 1000);
+
+
+    const timer = document.getElementById("time-on-site");
+    let time = JSON.parse(sessionStorage.getItem("sessionTime")) || [0, 0, 0];
+    let [hours, minutes, seconds] = time;
+    // Get current session time
     setInterval(() => {
         if (seconds >= 60) {
             minutes++;
@@ -25,5 +29,6 @@ window.onload = () => {
         } else {
             timer.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
         }
+        sessionStorage.setItem("sessionTime", JSON.stringify([hours, minutes, seconds]))
     }, 1000);
 };
