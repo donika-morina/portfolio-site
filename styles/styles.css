@@ -51,6 +51,31 @@ ul {
     list-style: none;
 }
 
+.button {
+    margin-top: 1.5rem;
+    border: 2px solid var(--text-colour);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0 var(--accent-colour);
+    font-family: "Geologica", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -3%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.5rem 2.25rem;
+    width: fit-content;
+}
+
+.button:hover {
+    color: var(--text-colour);
+    transform: translateY(-5px);
+    box-shadow: 12px 12px 0px var(--accent-colour);
+}
+
+.button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px var(--accent-colour);
+}
+
 ::selection {
     background-color: var(--accent-translucent);
     /*color: var(--text-colour);*/

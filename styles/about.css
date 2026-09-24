@@ -1,0 +1,41 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.about-picture {
+    grid-column: 1;
+}
+
+.about-section {
+    grid-column: 2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.about-paragraph>p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -3%;
+}
+
+sup {
+    color: var(--accent-colour);
+    font-weight: 600;
+    padding-left: 0.2rem;
+}
+
+@media (max-width: 1200px) {
+    .about-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-picture {
+        display: none;
+    }
+}
