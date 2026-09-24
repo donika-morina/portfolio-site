@@ -83,7 +83,7 @@ ul {
 
 .align-center {
     text-align: center;
-    padding: 5rem;
+    /*padding: 5rem;*/
 }
 
 .align-left {
@@ -329,14 +329,14 @@ em {
 .about {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 8rem;
     margin-top: 8rem;
 }
 
 .about-content {
-    padding-top: 5rem;
+    max-width: 740px;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -348,7 +348,7 @@ em {
 }
 
 .about-heading {
-    max-width: 940px;
+    max-width: 700px;
 }
 
 .profile {
