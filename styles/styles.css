@@ -232,19 +232,19 @@ header {
 }
 
 .hero-subheading.left {
-    align-self: flex-start;
+    align-self: end;
     grid-row: 1;
     grid-column: 1;
-    align-self: end;
     margin-bottom: -3rem;
+    /* animation: move-left-sh 2s ease-in; */
 }
 
 .hero-subheading.right {
-    align-self: flex-end;
+    /* align-self: flex-end; */
     grid-row: 3;
     grid-column: 3;
-    align-self: start;
     margin-top: -3rem;
+    /* animation: move-right-sh 2s ease-in; */
 }
 
 .hero-heading {
@@ -254,32 +254,69 @@ header {
     grid-row: 2;
 }
 
-@keyframes grow-name {
+
+@keyframes move-left-sh {
     from {
-        width: 0%;
-        letter-spacing: -50%;
+        text-align: right;
+        padding-right: 1rem;
     }
 
-    55% {
-        width: 0%;
-        letter-spacing: -50%;
-
+    65% {
+        text-align: right;
+        padding-right: 1rem;
     }
 
     to {
-        letter-spacing: 0%;
+        /* text-align: center; */
+        padding-right: 1rem;
+    }
+}
+
+@keyframes move-right-sh {
+    from {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    65% {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    to {
+        /* text-align: center; */
+        padding-right: 2rem;
+    }
+}
+
+@keyframes scale-name {
+    from {
+        letter-spacing: -75%;
+        padding: 0;
+    }
+
+    40% {
+        letter-spacing: -75%;
+        padding: 0;
+    }
+
+    to {
+        letter-spacing: 0;
     }
 }
 
 .hero-heading h1 {
     font-size: 6rem;
     text-align: center;
-    border-left: 3px solid var(--text-colour);
-    border-right: 3px solid var(--text-colour);
     padding: 0 1rem;
     overflow: hidden;
     text-wrap-mode: nowrap;
-    animation: grow-name 1s ease-in;
+    animation: scale-name 1.5s linear;
+}
+
+.hero-heading div {
+    border-left: 3px solid var(--text-colour);
+    border-right: 3px solid var(--text-colour);
 }
 
 .placeholder {
@@ -292,7 +329,7 @@ header {
     letter-spacing: 0%;
     white-space: nowrap;
     text-wrap-mode: nowrap;
-    animation: grow-name 1s ease-in;
+    animation: scale-name 1.5s linear;
 }
 
 
