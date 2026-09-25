@@ -254,12 +254,32 @@ header {
     grid-row: 2;
 }
 
+@keyframes grow-name {
+    from {
+        width: 0%;
+        letter-spacing: -50%;
+    }
+
+    55% {
+        width: 0%;
+        letter-spacing: -50%;
+
+    }
+
+    to {
+        letter-spacing: 0%;
+    }
+}
+
 .hero-heading h1 {
     font-size: 6rem;
     text-align: center;
     border-left: 3px solid var(--text-colour);
     border-right: 3px solid var(--text-colour);
     padding: 0 1rem;
+    overflow: hidden;
+    text-wrap-mode: nowrap;
+    animation: grow-name 1s ease-in;
 }
 
 .placeholder {
@@ -268,8 +288,15 @@ header {
     text-align: center;
     padding: 0 1rem;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
+    letter-spacing: 0%;
+    white-space: nowrap;
+    text-wrap-mode: nowrap;
+    animation: grow-name 1s ease-in;
 }
+
+
+
 
 .hero-heading::before,
 .hero-heading::after {
@@ -720,10 +747,6 @@ footer {
         flex-direction: column;
     }
 
-    .placeholder {
-        display: none;
-    }
-
     .footer-container {
         flex-wrap: wrap;
         gap: 2rem;
@@ -738,5 +761,11 @@ footer {
     .align-right {
         text-align: right;
         padding-right: 1rem;
+    }
+}
+
+@media (max-width: 745px) {
+    .hero-heading h1 {
+        text-wrap-mode: wrap;
     }
 }
