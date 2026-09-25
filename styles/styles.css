@@ -60,19 +60,22 @@ ul {
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: -3%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     padding: 0.5rem 2.25rem;
     width: fit-content;
+    background-color: var(--bg-colour);
 }
 
 .button:hover {
     color: var(--text-colour);
-    transform: translateY(-5px);
-    box-shadow: 12px 12px 0px var(--accent-colour);
+    transform: translateY(-2px);
+    box-shadow: 12px 14px 0px var(--accent-colour);
+    background-color: var(--bg-colour);
+    cursor: pointer;
 }
 
 .button:active {
-    transform: translateY(5px);
+    transform: translateY(8px);
     box-shadow: 0px 0px 0px var(--accent-colour);
 }
 

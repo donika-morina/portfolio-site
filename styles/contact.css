@@ -1,0 +1,58 @@
+form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+}
+
+form>* {
+    width: 100%;
+    font-size: 1rem;
+}
+
+form>label {
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+form>input,
+form>textarea {
+    margin-bottom: 0.75rem;
+    border: 2px solid var(--text-colour);
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+}
+
+form>textarea {
+    height: 12rem;
+    max-width: 100%;
+}
+
+.req-tag {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 65%;
+    padding-left: 0.5rem;
+}
+
+form>button {
+    align-self: flex-end;
+    margin-right: 12px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-text-container {
+    grid-column: 1;
+}
+
+.form-container {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
