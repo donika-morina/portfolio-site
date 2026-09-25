@@ -311,7 +311,7 @@ header {
     padding: 0 1rem;
     overflow: hidden;
     text-wrap-mode: nowrap;
-    animation: scale-name 1.5s linear;
+    animation: scale-name 1.5s ease;
 }
 
 .hero-heading div {
@@ -329,7 +329,7 @@ header {
     letter-spacing: 0%;
     white-space: nowrap;
     text-wrap-mode: nowrap;
-    animation: scale-name 1.5s linear;
+    animation: scale-name 1.5s ease;
 }
 
 
