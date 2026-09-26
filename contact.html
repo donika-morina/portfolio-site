@@ -50,6 +50,7 @@
 
     <!-- SCRIPTS -->
     <script src="/scripts/clock.js" defer></script>
+    <script src="/scripts/contact.js" defer></script>
 </head>
 
 <body>
@@ -71,15 +72,20 @@
             <div class="contact-content">
                 <div class="contact-text-container"></div>
                 <div class="form-container">
-                    <form action="">
+                    <form name="contact" method="POST" netlify-honeypot="website" data-netilfy="true">
                         <label for="name">Name <span class="req-tag">(required)</span></label>
-                        <input type="text" placeholder="Johnny Appleseed" required />
+                        <input type="text" id="name" name="name" placeholder="Johnny Appleseed" required />
                         <label for="email">Email <span class="req-tag">(required)</span></label>
-                        <input type="email" placeholder="someone@example.com" required />
+                        <input type="email" id="email" name="email" placeholder="someone@example.com" required />
+                        <label class="website">
+                            Your Website: <input name="website" type="text" />
+                        </label>
                         <label for="subject">Subject <span class="req-tag">(required)</span></label>
-                        <input type="text" placeholder="Hey! I think you'd make a great fit!" required>
+                        <input type="text" id="subject" name="subject"
+                            placeholder="Hey! I think you'd make a great fit!" required>
                         <label for="message">Message <span class="req-tag">(required)</span></label>
-                        <textarea type="text" placeholder="Write your message here..." required></textarea>
+                        <textarea type="text" id="message" name="message" placeholder="Write your message here..."
+                            required></textarea>
                         <button class="button" type="submit">Submit</button>
                     </form>
                 </div>
