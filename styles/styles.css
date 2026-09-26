@@ -332,9 +332,6 @@ header {
     animation: scale-name 1.5s ease;
 }
 
-
-
-
 .hero-heading::before,
 .hero-heading::after {
     content: "";
@@ -693,6 +690,43 @@ em {
     text-wrap-mode: nowrap;
     bottom: 50%;
     left: 35%;
+}
+
+.contact {
+    margin: 5rem 0 10rem 0;
+}
+
+.contact>.section-heading {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    margin-top: 4rem;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-links>.button {
+    padding: 1rem 5rem;
+    font-size: 1.75rem;
+    margin: 0 8px 0 0;
+    justify-self: flex-end;
+}
+
+.social-link-container {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.social-link-container>li {
+    transition: transform 0.2s ease;
+}
+
+.social-link-container>li:hover {
+    transform: translateY(-5px);
 }
 
 
