@@ -36,6 +36,8 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -768,6 +770,48 @@ footer {
     width: 25px;
     height: 25px;
     background-image: url("/assets/Tag.svg");
+}
+
+/* 404 PAGE*/
+.container-404 {
+    border-top: 12px solid transparent;
+    border-image: var(--border-svg) 13 round;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.content-404 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+.content-404>*:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.content-404>*:nth-child(even) {
+    align-self: flex-end;
+}
+
+.content-404>h1 {
+    font-family: "Geologica", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.content-404>h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--accent-colour);
+}
+
+.content-404>h3 {
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 @media (max-width: 1305px) {
