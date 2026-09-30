@@ -57,6 +57,16 @@ strong {
     font-weight: 600;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Geologica", sans-serif;
+    font-weight: 500;
+}
+
 .button {
     margin-top: 1.5rem;
     border: 2px solid var(--text-colour);
@@ -778,7 +788,7 @@ footer {
     border-image: var(--border-svg) 13 round;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 5rem;
+    padding: 5rem 3rem 2rem 3rem;
     gap: 3rem;
 }
 
@@ -820,6 +830,77 @@ footer {
     margin-top: 4rem;
     font-size: 1.75rem;
 }
+
+.colophon-container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.colophon-content {
+    padding: 0 4.25rem;
+    margin-top: 1.5rem;
+}
+
+.colophon-content>h2 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.colophon-content>p {
+    font-size: 1.25rem;
+}
+
+.colophon-content>ul {
+    list-style: disc;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.colophon-content>ul>li {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+}
+
+blockquote>h2 {
+    position: relative;
+    /* for pseudos */
+    font-size: clamp(1.4rem, 0.8rem + 2.5vmin, 2.4rem);
+    font-weight: normal;
+    border: 2px solid var(--text-colour);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+blockquote>h2:after {
+    content: "";
+    position: absolute;
+    border: 2px solid var(--text-colour);
+    border-radius: 0 25px 0 0;
+    width: 30px;
+    height: 50px;
+    bottom: -52px;
+    left: 15px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3;
+}
+
+blockquote>h2:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    border: 6px solid var(--bg-colour);
+    bottom: -4px;
+    left: 15px;
+    z-index: 2;
+}
+
+
+
+
 
 @media (max-width: 1305px) {
     .project-card-container {
