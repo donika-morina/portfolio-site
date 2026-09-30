@@ -1,6 +1,6 @@
 :root {
-    --bg-colour: #FFFDF9;
-    --bg-colour-translucent: #fffdf959;
+    --bg-colour: #fafafa;
+    --bg-colour-translucent: #fafafa59;
     --text-colour: #4A5759;
     --accent-colour: #EDAFB8;
     --accent-translucent: #eda5b863;
@@ -385,12 +385,14 @@ em {
 }
 
 .see-more>svg {
-    transform: translateY(25%);
-    transition: transform 0.2s ease;
+    transform: translate(0, 25%);
+    stroke: var(--text-colour);
+    transition: transform 0.2s ease-out, stroke 0.3s ease;
 }
 
 .see-more:hover>svg {
     transform: translate(50%, 25%);
+    stroke: var(--accent-colour);
 }
 
 /* Horizontal Scroll*/
