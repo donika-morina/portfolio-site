@@ -778,13 +778,14 @@ footer {
     border-image: var(--border-svg) 13 round;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding: 5rem;
+    gap: 3rem;
 }
 
 .content-404 {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    margin: auto;
+    width: 100%;
 }
 
 .content-404>*:nth-child(odd) {
@@ -798,20 +799,26 @@ footer {
 .content-404>h1 {
     font-family: "Geologica", sans-serif;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: 11rem;
+    text-shadow: 20px 15px 0 var(--text-colour-translucent);
+    line-height: 10rem;
 }
 
-.content-404>h2 {
-    font-family: "Fraunces", serif;
+.content-404>h2>em {
     font-weight: 700;
-    font-size: 3rem;
-    color: var(--accent-colour);
+    font-size: 8rem;
 }
 
 .content-404>h3 {
+    margin-top: 2rem;
     font-family: "Geologica", sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 3.25rem;
+}
+
+.content-404>.button {
+    margin-top: 4rem;
+    font-size: 1.75rem;
 }
 
 @media (max-width: 1305px) {
