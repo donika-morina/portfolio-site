@@ -1,7 +1,23 @@
 
 const filterBtns = Array.from(document.getElementsByClassName("filter-btn"));
 const projects = Array.from(document.getElementById("projects").children);
+const searchBar = document.getElementById("search");
 let activeFilter = "Featured";
+
+function filterProjects(activeFilter) {
+    projects.forEach(project => {
+        if (!activeFilter) {
+            project.classList.remove("hidden");
+        } else {
+            const tags = JSON.parse(project.dataset.tags);
+            if (tags.includes(activeFilter)) {
+                project.classList.remove("hidden");
+            } else {
+                project.classList.add("hidden");
+            }
+        }
+    });
+}
 
 filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -23,19 +39,31 @@ filterBtns.forEach(btn => {
     });
 });
 
-function filterProjects(activeFilter) {
+
+// !! This will break if I redesign the links !!
+function projectMatches(content, search) {
+    const titleMatch = content[0].textContent.toLowerCase().includes(search);
+    const descMatch = content[1].textContent.toLowerCase().includes(search);
+    const tagMatch = content[2].textContent.toLowerCase().includes(search);
+    return titleMatch || descMatch || tagMatch;
+}
+
+searchBar.addEventListener("keyup", () => {
+    const search = searchBar.value.toLowerCase();
+    if (search === "") {
+        filterProjects(activeFilter);
+        return;
+    }
     projects.forEach(project => {
-        if (!activeFilter) {
+        const content = Array.from(project.children[0].children);
+        if (projectMatches(content, search)) {
             project.classList.remove("hidden");
         } else {
-            const tags = JSON.parse(project.dataset.tags);
-            if (tags.includes(activeFilter)) {
-                project.classList.remove("hidden");
-            } else {
-                project.classList.add("hidden");
-            }
+            project.classList.add("hidden");
         }
     });
-}
+});
+
+
 
 filterProjects(activeFilter);
