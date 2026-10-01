@@ -12,6 +12,9 @@ window.onload = () => {
 	// Get Elements
 	const clock = document.getElementById("eastern-time");
 	const timer = document.getElementById("time-on-site");
+	const year = document.getElementById("year");
+
+	year.textContent = "2026";
 
 	// Get session start time from storage, or store current time in session storage
 	let sessionStartTime = JSON.parse(sessionStorage.getItem("sessionStartTime"));
