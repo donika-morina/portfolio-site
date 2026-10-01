@@ -784,6 +784,17 @@ footer {
     background-image: url("/assets/Tag.svg");
 }
 
+.arrow-up-right>svg {
+    stroke: var(--text-colour);
+    transform: translateY(-25%);
+    transition: transform 0.1s ease-out;
+}
+
+.external-link:hover .arrow-up-right>svg {
+    stroke: var(--accent-colour);
+    transform: translate(25%, -40%);
+}
+
 /* 404 PAGE*/
 .container-404 {
     border-top: 12px solid transparent;
