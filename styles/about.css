@@ -45,12 +45,12 @@
     padding: 2rem 0;
 }
 
-.about-paragraph>p {
+.about-paragraph>p,
+.popup-btn {
     font-family: "Noto Sans", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    letter-spacing: 0;
-    line-height: 2.75rem;
+    line-height: 2.25rem;
 }
 
 sup {
@@ -63,6 +63,61 @@ sup {
     vertical-align: baseline;
     top: -0.5rem;
 }
+
+.popup-btn {
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+}
+
+
+.popup-btn:hover {
+    color: var(--accent-colour);
+}
+
+.popup-btn:hover sup {
+    top: -0.75rem;
+}
+
+.popup {
+    position: absolute;
+    width: 325px;
+    background-color: var(--bg-colour);
+    border: 3px solid var(--text-colour);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.popup-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 0.25rem;
+}
+
+.popup-header:hover {
+    cursor: grab;
+}
+
+.popup-header:active {
+    cursor: grabbing;
+}
+
+.popup-header>button {
+    width: 1.25rem;
+    aspect-ratio: 1/1;
+}
+
+.popup-header>button:hover {
+    cursor: pointer;
+}
+
+.popup>p {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 
 @media (max-width: 1200px) {
     .about-container {
