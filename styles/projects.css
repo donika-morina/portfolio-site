@@ -19,11 +19,22 @@
 
 .filters {
     gap: 1.25rem;
-    padding: 0 1rem;
+    margin-left: 1rem;
 }
 
-.filters>* {
+.filter-btn {
+    border: none;
+    background-color: #00000000;
     font-size: 1.15rem;
+}
+
+.filter-btn:hover {
+    cursor: pointer;
+    background-color: alpha(from var(--accent-colour) / 25%);
+}
+
+.filter-btn[aria-pressed="true"] {
+    border-bottom: 4px solid var(--accent-colour);
 }
 
 .search-container>input {
@@ -106,4 +117,8 @@
     box-shadow: 15px 15px 0 var(--accent-colour);
     transform: translateY(-5px);
     cursor: pointer;
+}
+
+.project-page-link.hidden {
+    display: none;
 }

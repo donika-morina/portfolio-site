@@ -50,8 +50,9 @@
 
     <!-- SCRIPTS -->
     <script src="/scripts/clock.js" defer></script>
-    <script src="/scripts/generateProjects.js" defer></script>
     <script src="/scripts/getLastCommit.js" defer></script>
+    <script src="/scripts/generateProjects.js" defer></script>
+    <script src="/scripts/filterProjects.js" defer></script>
 </head>
 
 <body>
@@ -74,10 +75,14 @@
                 <div class="filter-container">
                     <h3>Filters: </h3>
                     <ul class="filters">
-                        <li>Featured</li>
-                        <li>Web</li>
-                        <li>Scripting</li>
-                        <li>Experiments</li>
+                        <li><button class="filter-btn" aria-pressed="true" data-filter="Featured">Featured</button></li>
+                        <li><button class="filter-btn" aria-pressed="false" data-filter="Web Development">Web</button>
+                        </li>
+                        <li><button class="filter-btn" aria-pressed="false" data-filter="Scripting">Scripting</button>
+                        </li>
+                        <li><button class="filter-btn" aria-pressed="false" data-filter="Games">Games</button></li>
+                        <li><button class="filter-btn" aria-pressed="false" data-filter="Hardware">Hardware</button>
+                        </li>
                     </ul>
                 </div>
                 <div class="search-container"><input type="text" placeholder="Search..."></div>

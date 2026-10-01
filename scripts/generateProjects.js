@@ -40,7 +40,7 @@ const container = document.getElementById("projects");
 
 PROJECTS.forEach((project) => {
 	container.innerHTML += `
-        <a class="project-page-link" href=${project.link} target="_blank">
+        <a class="project-page-link" href=${project.link} target="_blank" data-tags='${JSON.stringify(project.tags)}'>
             <div>
                 <h3 class="link-title">${project.title}</h3>
                 <p class="desc">${project.desc}</p>
