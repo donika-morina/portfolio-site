@@ -798,6 +798,10 @@ footer {
     transform: translate(25%, -40%);
 }
 
+.git-icon {
+    transform: translateY(-25%);
+}
+
 /* 404 PAGE*/
 .container-404 {
     border-top: 12px solid transparent;

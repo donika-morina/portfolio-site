@@ -50,6 +50,7 @@
 
     <!-- SCRIPTS -->
     <script src="/scripts/clock.js" defer></script>
+    <script src="/scripts/getLastCommit.js" defer></script>
 </head>
 
 <body>
@@ -161,7 +162,15 @@
                     <p>South-Western Ontario, Canada</p>
                     <p>ET <span id="eastern-time"></span></p>
                     <br>
-                    <p><span id="last-commit"></span></p>
+                    <p><svg class="git-icon" width="14" height="7" viewBox="0 0 14 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.612305 3.13314H4.08314M9.9223 3.13314H13.3931M9.33314 3.13314C9.33314 4.4218 8.28847 5.46647 6.9998 5.46647C5.71114 5.46647 4.66647 4.4218 4.66647 3.13314C4.66647 1.84447 5.71114 0.799805 6.9998 0.799805C8.28847 0.799805 9.33314 1.84447 9.33314 3.13314Z"
+                                stroke="#4A5759" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <a class="footer-link" id="last-commit" target="_blank"></a>
+                    </p>
                     <p><span id="total-visitors"></span></p>
                     <p>
                         <svg class="inline-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
