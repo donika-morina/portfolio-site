@@ -49,6 +49,7 @@
 
     <!-- SCRIPTS -->
     <script src="/scripts/clock.js" defer></script>
+    <script src="/scripts/getLastCommit.js" defer></script>
 </head>
 
 <body>
@@ -77,8 +78,16 @@
                 <div class="footer-contact">
                     <h6 class="footer-heading">Contact</h6>
                     <p>
-                        <strong>hello</strong>[at]<strong>donika</strong>[dot]<strong>info</strong>
+                        <strong>hello</strong>[at]<strong>donikamorina</strong>[dot]<strong>ca</strong>
                     </p>
+                    <br>
+                    <br>
+                    <p>
+                        Emails are checked Monday - Friday.
+                        <br>
+                        Responses within 48 hours.
+                    </p>
+                    <br>
                 </div>
                 <div class="footer-sitemap">
                     <h6 class="footer-heading">Sitemap</h6>
@@ -92,21 +101,45 @@
                 <div class="footer-elsewhere">
                     <h6 class="footer-heading">Elsewhere</h6>
                     <ul>
-                        <li><a class="footer-link" target="_blank" href="https://github.com/donika-morina">GitHub <i
-                                    class="arrow-up-right"></i></a></li>
-                        <li><a class="footer-link" target="_blank" href="/about">About <i
-                                    class="arrow-up-right"></i></a>
+                        <li><a class="footer-link external-link" target="_blank"
+                                href="https://github.com/donika-morina">GitHub <i class="arrow-up-right "><svg
+                                        width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.08301 9.91668L9.91634 4.08334M9.91634 9.91668V4.08334H4.08301"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></i></a></li>
+                        <li><a class="footer-link external-link" target="_blank"
+                                href="https://codepen.io/donika-morina">CodePen <i class="arrow-up-right"><svg
+                                        width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.08301 9.91668L9.91634 4.08334M9.91634 9.91668V4.08334H4.08301"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></i></a>
                         </li>
-                        <li><a class="footer-link" target="_blank" href="/projects">Projects <i
-                                    class="arrow-up-right"></i></a>
+                        <li><a class="footer-link external-link" target="_blank"
+                                href="https://donikasnotebook.com">Donika's Notebook
+                                <i class="arrow-up-right"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.08301 9.91668L9.91634 4.08334M9.91634 9.91668V4.08334H4.08301"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></i></a>
                         </li>
+
                     </ul>
                 </div>
                 <div class="footer-more-info">
                     <p>South-Western Ontario, Canada</p>
                     <p>ET <span id="eastern-time"></span></p>
                     <br>
-                    <p><span id="last-commit"></span></p>
+                    <p><svg class="git-icon" width="14" height="7" viewBox="0 0 14 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.612305 3.13314H4.08314M9.9223 3.13314H13.3931M9.33314 3.13314C9.33314 4.4218 8.28847 5.46647 6.9998 5.46647C5.71114 5.46647 4.66647 4.4218 4.66647 3.13314C4.66647 1.84447 5.71114 0.799805 6.9998 0.799805C8.28847 0.799805 9.33314 1.84447 9.33314 3.13314Z"
+                                stroke="#4A5759" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <a class="footer-link" id="last-commit" target="_blank"></a>
+                    </p>
                     <p><span id="total-visitors"></span></p>
                     <p>
                         <svg class="inline-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
