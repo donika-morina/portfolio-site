@@ -1,12 +1,24 @@
 const footnotes = {
-    "1": "I don't think the writing of the sentence was a creative endeavour, but the programming of it was.",
-    "2": "Too many somes and something or others."
+    "donika": "Pronouced Doh-<em>knee</em>-ka, with stress on the knee.",
+    "site": "It wasn't a particularly good website, but I thought it was the coolest thing I'd done up until that point.",
+    "media": "Since I've always had a small obsession with books, why not merge some hobbies and make a virtual library? You can look around <a href='https://donikasnotebook.com/media-journal/' target='_blank'>here</a>.",
+    "blog": "It technically is a blog, but I mostly consider it an archive for my work processes that happens to be public. If you feel like doing some more reading, you can find it <a href='https://donikasnotebook.com/blog/' target='_blank'>here</a>.",
+    "hardware": "I accidentally blew up a circuit board one (1) time and now I'm not allowed to use car batteries as power sources without supervision.",
+    "karate": "",
+    "soccer": "There is a surprising amount of joy to be had trying to wrangle a group of children long enough to have them work together to chase a ball."
 };
+
+`
+<div class="popup">
+    <div class="popup-header"></div>
+    <p></p>
+</div>
+`
 
 
 function createPopup(name, top, left, width) {
-    console.log("hello");
     const popup = document.createElement("div");
+    popup.classList.add("popup");
     const dragHeader = document.createElement("div");
     dragHeader.classList.add("popup-header");
     const closeBtn = document.createElement("button");
@@ -14,16 +26,16 @@ function createPopup(name, top, left, width) {
         closeBtn.parentNode.parentNode.remove();
     })
     dragHeader.appendChild(closeBtn);
-    makeDraggable(dragHeader);
     const para = document.createElement("p");
-    para.textContent = footnotes[name];
+    para.innerHTML = footnotes[name];
     popup.appendChild(dragHeader);
     popup.appendChild(para);
-    popup.classList.add("popup");
     popup.style.top = top + 30 + "px";
     popup.style.left = left - (162 - Math.floor(width / 2)) + "px";
-    document.body.appendChild(popup);
+    makeDraggable(dragHeader);
+    document.querySelector(".site-container").appendChild(popup);
 }
+
 
 Array.from(document.getElementsByClassName("popup-btn")).map((btn) => {
     btn.addEventListener("click", (e) => {

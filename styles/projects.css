@@ -61,7 +61,8 @@
 .project-page-link {
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     aspect-ratio: 1 / 0.9;
     padding: 1.25rem;
@@ -72,6 +73,10 @@
     color: var(--text-colour);
     box-shadow: 10px 10px 0 var(--accent-colour);
     transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.project-page-link>div {
+    margin: auto 0;
 }
 
 .link-title {
@@ -114,7 +119,6 @@
 .date {
     font-size: 1.25rem;
     align-self: flex-end;
-    justify-self: flex-end;
 }
 
 .project-page-link:hover {

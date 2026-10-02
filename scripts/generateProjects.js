@@ -2,7 +2,7 @@ const PROJECTS = [
 	{
 		title: "Donika's Notebook",
 		desc: "Some sort of description",
-		tags: ["Web Development"],
+		tags: ["Web Development", "Featured"],
 		date: "2025",
 		link: "https://donikasnotebook.com",
 	},
@@ -34,6 +34,22 @@ const PROJECTS = [
 		date: "2025",
 		link: "https://donikasnotebook.com/desktop/",
 	},
+	{
+		title: "Police Robot Motor Controls",
+		desc: "",
+		tags: ["Hardware"],
+		date: "2019",
+		link: "#",
+	},
+	{
+		title: "Battle Bot",
+		desc: "",
+		tags: [""],
+		date: "2017",
+		link: "#",
+	},
+
+
 ];
 
 const container = document.getElementById("projects");
@@ -45,10 +61,10 @@ PROJECTS.forEach((project) => {
                 <h3 class="link-title">${project.title}</h3>
                 <p class="desc">${project.desc}</p>
                 <ul class="project-tags">
-                    ${project.tags.map((tag) => "<li>" + tag + "</li>").join("\n")}
+                    ${project.tags.map((tag) => { if (tag != "Featured") return "<li>" + tag + "</li>" }).join("\n")}
                 </ul>
             </div>
-            <p class="date">2025</p>
+            <p class="date">${project.date}</p>
         </a>
         `;
 });

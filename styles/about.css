@@ -1,3 +1,7 @@
+:root {
+    --bg-popup: #ebebeb;
+}
+
 .about-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -62,6 +66,7 @@ sup {
     position: relative;
     vertical-align: baseline;
     top: -0.5rem;
+    transition: top 0.1s ease-out;
 }
 
 .popup-btn {
@@ -78,25 +83,48 @@ sup {
     top: -0.75rem;
 }
 
+@keyframes popup {
+    from {
+        transform: scale(0);
+    }
+
+    85% {
+        transform: scale(1.15);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 .popup {
     position: absolute;
     width: 325px;
-    background-color: var(--bg-colour);
-    border: 3px solid var(--text-colour);
+    background-color: var(--bg-popup);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     padding: 0.5rem;
+    animation: popup 0.2s ease;
+    cursor: default;
 }
 
 .popup-header {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 0.25rem;
+    cursor: grab;
+    margin: -0.5rem;
+    position: relative;
 }
 
-.popup-header:hover {
-    cursor: grab;
+.popup-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 94%;
+    height: 1px;
+    border-radius: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .popup-header:active {
@@ -104,19 +132,64 @@ sup {
 }
 
 .popup-header>button {
+    position: relative;
+    aspect-ratio: 1 /1;
     width: 1.25rem;
-    aspect-ratio: 1/1;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.popup-header>button::before,
+.popup-header>button::after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 2px;
+    border-radius: 2px;
+    background-color: rgb(207, 4, 4);
+    transition: background-color 0.2s ease;
+}
+
+.popup-header>button::before {
+    transform: rotate(45deg);
+}
+
+.popup-header>button::after {
+    transform: rotate(-45deg);
 }
 
 .popup-header>button:hover {
-    cursor: pointer;
+    background-color: #00000000;
 }
 
-.popup>p {
-    padding: 0.75rem;
+.popup-header>button:hover::before,
+.popup-header>button:hover::after {
+    background-color: rgb(255, 9, 9);
+}
+
+
+.popup p {
+    padding: 1.25rem 0.75rem 0.75rem 0.75rem;
+}
+
+.popup * {
     font-size: 1rem;
     font-weight: 400;
 }
+
+.popup em {
+    color: var(--text-colour);
+}
+
+.popup a {
+    font-style: italic;
+    /* text-decoration: underline; */
+}
+
 
 
 @media (max-width: 1200px) {
