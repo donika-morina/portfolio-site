@@ -42,7 +42,7 @@ function createPopup(name, top, left, targ) {
     if (targ.offsetHeight > 25) {
         popup.style.left = aboutSection.offsetLeft + "px";
     } else {
-        popup.style.left = Math.min(Math.max(0, left + Math.floor(targ.offsetWidth / 2) - halfPopupWidth), site.offsetWidth - halfPopupWidth * 2 - 10) + "px";
+        popup.style.left = Math.min(site.offsetWidth - halfPopupWidth * 2 - 10, Math.max(0, left + Math.floor(targ.offsetWidth / 2) - halfPopupWidth)) + "px";
     }
     makeDraggable(popup.querySelector(".popup-header"));
     site.appendChild(popup);
