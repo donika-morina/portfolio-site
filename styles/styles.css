@@ -7,12 +7,13 @@
     --text-colour-translucent: #4a575917;
     --border-svg: url("/assets/border.svg");
 
-    --project-card-width: 430px;
+    --project-card-width: 400px;
     --project-card-height: 375px;
 
-    --plus-svg: url('data:image/svg+xml;utf8, <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="7.5" y1="15" x2="7.5" stroke-width="1" stroke="%234A5759"/> <line y1="7.5" x2="15" y2="7.5" stroke-width="1" stroke="%234A5759"/></svg>');
-    --plus-size: 15px;
-    --plus-offset: -8px;
+    --plus-svg-15: url('data:image/svg+xml;utf8, <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="7.5" y1="15" x2="7.5" stroke-width="1" stroke="%234A5759"/> <line y1="7.5" x2="15" y2="7.5" stroke-width="1" stroke="%234A5759"/></svg>');
+    --plus-svg: url('data:image/svg+xml;utf8, <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="10.5" y1="21" x2="10.5" stroke="%234A5759"/><line y1="10.5" x2="21" y2="10.5" stroke="%234A5759"/></svg>');
+    --plus-size: 21px;
+    --plus-offset: -11px;
 
 }
 
@@ -161,8 +162,6 @@ h6 {
 }
 
 .border {
-    height: 50%;
-    width: 75%;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -174,7 +173,7 @@ h6 {
     background-image: var(--plus-svg), var(--plus-svg);
     background-repeat: no-repeat;
     background-size: var(--plus-size) var(--plus-size);
-    height: 15px;
+    height: var(--plus-size);
     left: var(--plus-offset);
     right: var(--plus-offset);
     background-position: top left, top right;
@@ -188,20 +187,13 @@ h6 {
     top: var(--plus-offset)
 }
 
-.border>.header {
+.border .header {
     --margin: 1rem;
     margin-top: var(--margin);
     margin-left: var(--margin);
     text-transform: uppercase;
     font-weight: 100;
     font-size: 2rem;
-}
-
-
-.about,
-.tools,
-.projects {
-    margin-bottom: 10rem;
 }
 
 .inline-icon {
@@ -216,7 +208,6 @@ h6 {
 }
 
 .page-heading>h1 {
-    font-family: "Geologica", sans-serif;
     font-weight: 800;
     font-size: 3rem;
     max-width: 800px;
@@ -433,28 +424,9 @@ header {
     display: none;
 }
 
-.section-heading {
-    font-family: "Geologica", sans-serif;
-    font-weight: 500;
-    font-size: 2.5rem;
-    z-index: 26;
-    position: relative;
-}
-
-section {
-    width: 100%;
-}
-
-em {
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    font-size: 1.05em;
-    color: var(--accent-colour);
-}
-
 .see-more {
     text-decoration: underline;
-    font-size: 1.5rem;
+    font-size: 1em;
 }
 
 .see-more>svg {
@@ -504,17 +476,37 @@ em {
     transform: translateY(-0.65rem);
 }
 
+/* Main Body Content */
+main>section {
+    width: 85%;
+    margin: 0 auto 2rem auto;
+}
+
+.main-text {
+    font-weight: 300;
+    font-size: 1.75rem;
+    z-index: 26;
+}
+
+em {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: var(--accent-colour);
+}
+
+
 /* About Section */
 .about {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: start;
+    gap: 2rem;
+    margin-top: 4rem;
 }
 
 .about>:first-child {
-    max-width: 800px;
+    max-width: 950px;
 }
 
 .about-content {
@@ -534,23 +526,17 @@ em {
     list-style: none;
 }
 
-
-
 .profile {
-    height: 500px;
-    width: 500px;
+    margin: 0 1.5rem 1.5rem;
+    width: 25vw;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--text-colour);
 }
 
 /* Tool Section */
-.tools {
-    width: 85%;
-    margin: auto;
-}
-
-.tools>.section-heading {
-    margin-bottom: 1.75rem;
+.tools .main-text {
+    margin-left: 1%;
 }
 
 .tool-container {
@@ -559,12 +545,14 @@ em {
     margin: auto;
     position: relative;
     user-select: none;
+    overflow: hidden;
 }
 
 .tool {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    width: 275px;
+    width: 24%;
+    max-width: 275px;
     min-height: 4.75rem;
     border: 2px solid var(--text-colour);
     border-radius: 5px;
@@ -607,7 +595,17 @@ em {
 }
 
 /* Projects Section */
+.projects {
+    width: 100%;
+    margin-top: 4rem;
+    position: relative;
+}
+
 .projects-bg {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 20%;
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, var(--text-colour-translucent) 1px, transparent 1px),
@@ -627,7 +625,7 @@ em {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
-    padding: 8rem 0;
+    padding: 3rem 0;
     margin: auto;
     width: min(calc(3.5 * var(--project-card-width)), 100%);
     position: relative;
@@ -654,7 +652,7 @@ em {
     justify-self: center;
 }
 
-.project-card::after {
+/* .project-card::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -665,14 +663,15 @@ em {
     background-color: var(--accent-colour);
     z-index: -1;
     transition: transform 0.6s ease;
-}
+} */
 
 .project-card-content {
     height: 100%;
     width: 100%;
-    border: 4px solid var(--text-colour);
-    border-radius: 5px;
+    /* border: 4px solid var(--text-colour); */
+    /* border-radius: 5px; */
     background-color: var(--bg-colour);
+    will-change: transform;
     transition: transform 0.6s ease;
     transform-style: preserve-3d;
     position: relative;
@@ -703,17 +702,23 @@ em {
     z-index: 6;
 }
 
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .card-front>img {
     margin: auto;
-    height: 250px;
-    width: 375px;
-    background-color: var(--text-colour);
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: #dadada;
+    border: 1px solid var(--text-colour);
     border-radius: 5px;
 }
 
 .card-front>h4 {
-    font-family: "Geologica";
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
     margin: 0.5rem 0;
     font-size: 1.5rem;

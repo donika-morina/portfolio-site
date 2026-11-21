@@ -10,6 +10,7 @@ async function getLastCommit() {
 		gitLink.textContent = data[0]["sha"].slice(0, 7);
 	} catch {
 		gitLink.textContent = "unable to get last commit";
+		gitLink.style.color = "#ca5359";
 	}
 }
 
