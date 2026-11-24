@@ -450,7 +450,7 @@ header {
 }
 
 .scroller {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
     animation: marquee 20s linear infinite;
     white-space: nowrap;
@@ -465,7 +465,7 @@ header {
 .scroller>span {
     display: inline-block;
     transition: transform 0.3s ease-out;
-    padding: 1rem 0.3rem;
+    padding: 0.5rem 0.4rem;
     font-size: 2rem;
     cursor: default;
     font-family: "Noto Sans", monospace;
@@ -809,6 +809,60 @@ em {
     text-wrap-mode: nowrap;
     bottom: 50%;
     left: 35%;
+}
+
+/* ADAPTABLE*/
+.adaptable {
+    min-height: 45vw;
+    display: grid;
+    place-items: center;
+
+}
+
+#word-btn {
+    cursor: pointer;
+}
+
+#word-btn:hover {
+    color: grey;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    transition: all 0.75s ease;
+}
+
+.box:nth-child(2) {
+    padding: 2rem;
+    text-align: center;
+    max-width: 30vw;
+    aspect-ratio: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.growing {
+    height: 40vw;
+}
+
+.box.expanding {
+    max-width: 40vw;
+}
+
+.box.changing {
+    filter: invert(100%);
 }
 
 
