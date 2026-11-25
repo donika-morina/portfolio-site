@@ -447,6 +447,7 @@ header {
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
     border-image: var(--border-svg) 13 round;
+    user-select: none;
 }
 
 .scroller {
